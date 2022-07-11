@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+/* -------------reseteo universal------------- */
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+/* -------------Formateo de tamaños de letra------------- */
+
+html {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+h1 {
+	color: blue;
+}
+
+h3, p, label{
+	color: grey;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	font-weight: 300;
+}
+
+/* -------------Flex barra de navegacion------------- */
+
+.encabezado nav{
+	background-color: rgba(163, 197, 233, .8);
+	padding: 6px 20px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.encabezado nav ul {
+	display: flex;
+}
+
+.encabezado nav ul li {
+	list-style: none;
+	margin-right: 15px;
+}
+
+.encabezado nav ul li a{
+	color: black;
+	font-size: 1.4rem;
+	font-weight: 400;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.encabezado nav ul li a:hover {
+	color: grey;
+}
+
+
+/* -------------cajas generales contenido------------- */
+
+.logo{
+	width: 75px;
+	height: 75px;
+}
+
+.titulo{
+	padding: 10px;
+	background-color: whitesmoke;
+	border-bottom: solid black;
+	text-align: center;
+}
+/*
+.cajaCentral{
+	width: 90%;
+	height: auto;
+	margin: 10px auto;
+}
+*/
+
+.fondo {	
+	width: 100%;
+}
+
+
+/* -------------pie de pagina------------- */
+
+.pie {
+	display: flex;
+	padding: 10px;
+	padding-right: 50px;
+	background-color: lightgray;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pie_titulo{
+	display: inline-block;
+}
+
+
+/* -------------Galeria productos------------- */
+
+.productos .galeria{
+	margin: 20px;
+	display: flex;	
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.productos .galeria figure{
+	text-align: center;
+}
+
+.productos .galeria figure img{
+	width: 50%;
+	height: 50%;
+}
+
+.productos .galeria figure img:hover {
+	opacity: 75%;
+}
+
+.productos .galeria figure figcaption{
+	font-size: 1.6rem;
+	color: blue;
+	padding: 10px 0;
+}
+
+.productos .galeria p.price{
+	color: grey;
+	padding-bottom: 10px;
+}
+
+/* -------------Metiendo Grid------------- */
+
+body{
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+				"menu"
+				"principal"
+				"pie";
+}
+
+header{
+	grid-area: menu;
+}
+
+main{
+	grid-area: principal;
+}
+
+footer{
+	grid-area: pie;
+}
+
+aside{
+	grid-area: aside;
+}
+
+@media (min-width: 768px){
+	body{
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: 
+				"menu menu"
+				"principal principal"
+				"pie pie";
+	}
+
+}
+
+@media (min-width: 1024px){
+	body{
+		grid-template-columns: 20% 40% 40%;
+		grid-auto-rows: 10vh 80vh 10vh;
+		grid-template-areas: 
+				"menu menu menu"
+				"aside principal principal"
+				"pie pie pie";
+	}
+
+	.encabezado nav{
+		flex-direction: row;
+	}
+
+	.encabezado nav ul li a{
+		font-size: 2rem;
+		font-weight: 400;
+	}	
+
+	.productos .galeria{
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+
+	.productos .galeria figure img{
+	width: 75%;
+	height: 75%;
+	}
+
+	.productos .galeria figure figcaption{
+	font-size: 2rem;
+	}
+
+}
