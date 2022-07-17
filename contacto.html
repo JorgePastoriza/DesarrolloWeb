@@ -8,12 +8,13 @@
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-	<div id="contenedor-grid">
+	<div id="contenedor-grid-contacto">
 		<header class="arriba">
 			<nav class="botonera">
 				<a href="index.html">
 					<img src="img/logo.svg" alt="Logo DM Insumos">
 				</a>
+
 				<ul>
 					<li>
 						<a href="nosotros.html">Nosotros</a>
@@ -33,23 +34,37 @@
 
 		<main class="principal">
 			<div>
-				<h1>INSUMOS DESCARTABLES</h1>
+				<h1>EN CONTACTO</h1>
 
-				<p>Somos una empresa joven con una clara orientacion a la satisfaccion del cliente, buscamos dar soluciones a los problemas diarios de sumistros, con eficiencia, rapidez y precios competitivos.</p>
-
-				<p>Contamos con una amplia variedad de insumos descartarbles para consultorios, nuestra empresa se centra en la rapidez y previsibilidad para que el profesional solo se ocupe de sus pacientes. Contamos con la posibilidad de programar entregas en forma mensual o semanal. Manteniendo siempre un alto estandar de satisfaccion.</p>
-			</div>	
-				
-		</main>
-		<section class="imagen">
-			<img src="img/fondo.jpg" alt="bienvenido a insumos DM" class="scale_principal">
-		</section>
-		<section class="novedades">
-			<div>
-				<h2>Novedades</h2>
-				<p>Proximamente, ofreceremos insumos quirurgicos descartables.</p>
+				<form action="contacto.php">
+					<div>
+						<label for="name">Nombre y apellido</label>
+						<input type="text" id="name" placeholder="Ingrese su nombre">
+					</div>
+					<div>
+						<label for="empresa">Empresa</label>
+						<input type="text" id="empresa" placeholder="Empresa/consultorio">
+					</div>
+					<div>
+						<label for="correo">Email</label>
+						<input type="email" id="correo" placeholder="mail@servidor.com">
+					</div>
+					<div>
+						<label for="comentario">Deje su mensaje/consulta</label>
+						<textarea name="" id="comentario" cols="30" rows="10"></textarea>
+					</div>
+					<div>
+						<input type="reset" value="Cancelar">
+						<input type="submit" value="Enviar">
+					</div>
+				</form>
 			</div>
+		</main>
+
+		<section class="espacio">
+			<div></div>
 		</section>
+
 		<footer class="pie">
 			<h3 class="pie_titulo">Jorge Pastoriza - 2022</h3>
 				<div>
