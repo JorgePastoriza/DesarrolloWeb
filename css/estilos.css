@@ -142,7 +142,7 @@ iframe {
 	grid-template-areas: 
 	"arriba arriba arriba" 
 	"principal imagen imagen" 
-	"principal novedades novedades"
+	"novedades novedades novedades"
 	"pie pie pie";
 }
 
@@ -155,7 +155,7 @@ iframe {
 		grid-template-areas: 
 		"arriba arriba" 
 		"principal imagen"
-		"principal novedades"
+		"novedades novedades"
 		"pie pie";
 	}
 
@@ -327,4 +327,25 @@ iframe {
 		flex-direction: column;
 		align-items: center;
 	}
+}
+
+/* ---------------------- Animaciones ---------------------- */
+
+@keyframes headerAnimaciones{
+	0%{background-image: url(../img/header/1.jpg)}
+	25%{background-image: url(../img/header/2.jpg)}
+	50%{background-image: url(../img/header/3.jpg)}
+	75%{background-image: url(../img/header/4.jpg)}
+	100%{background-image: url(../img/header/5.jpg)}
+}
+
+.animaciones{
+	background-size: cover;
+	animation-name: headerAnimaciones;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+.rotate:hover {
+	transform: rotateZ(12deg);
 }
