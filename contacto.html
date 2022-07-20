@@ -5,77 +5,81 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DM Insumos</title>
 	<link rel="shortcut icon" href="img/favicon.png">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/estilo_bt.css">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-<body>
-	<div id="contenedor-grid-contacto">
-		<header class="arriba">
-			<nav class="botonera">
-				<a href="index.html">
-					<img src="img/logo.svg" alt="Logo DM Insumos">
-				</a>
+<body class="d-flex flex-column min-vh-100">
+	<!-- inicia nav -->
+	<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-celeste" id="botonera">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="index.html">
+			<img src="img/logo.svg" alt="Logo DM Insumos" class="logo">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link" aria-current="page" href="nosotros.html">Nosotros</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="productos.html">Productos</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="promociones.html">Promociones</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="contacto.html">Contacto</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<!------ termina nav ------>
 
-				<ul>
-					<li>
-						<a href="nosotros.html">Nosotros</a>
-					</li>		
-					<li>
-						<a href="productos.html">Productos</a>
-					</li>
-					<li>
-						<a href="promociones.html">Promociones</a>
-					</li>
-					<li>
-						<a href="contacto.html">Contacto</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
-		<main class="principal">
-			<div>
-				<h1>EN CONTACTO</h1>
-
-				<form action="contacto.php">
-					<div>
-						<label for="name">Nombre y apellido</label>
-						<input type="text" id="name" placeholder="Ingrese su nombre">
-					</div>
-					<div>
-						<label for="empresa">Empresa</label>
-						<input type="text" id="empresa" placeholder="Empresa/consultorio">
-					</div>
-					<div>
-						<label for="correo">Email</label>
-						<input type="email" id="correo" placeholder="mail@servidor.com">
-					</div>
-					<div>
-						<label for="comentario">Deje su mensaje/consulta</label>
-						<textarea name="" id="comentario" cols="30" rows="10"></textarea>
-					</div>
-					<div>
-						<input type="reset" value="Cancelar">
-						<input type="submit" value="Enviar">
-					</div>
-				</form>
-			</div>
-		</main>
-
-		<section class="espacio">
-			<div></div>
-		</section>
-
-		<footer class="pie">
-			<h3 class="pie_titulo">Jorge Pastoriza - 2022</h3>
-				<div>
-					<a href="https://facebook.com/" target="_blank">
-						<img src="img/facebook.png" alt="Facebook">
-					</a>
-					<a href="https://instagram.com/" target="_blank">
-						<img src="img/instagram.png" alt="Instagram">
-					</a>
+	<!------ inicia main ------>
+	<main>
+		<section class="container position-fluid py-3">
+	            <div class="row mb-5">
+	                <div class="col-md-12 col-xl-8 mx-auto">
+            			<h1 class="text-center">EN CONTACTO</h1>
+            			<p>Si tiene alguna duda o consulta sobre los productos comercializados lo invitamos a contactarse con nosotros.</p>
+            		</div>
+					<form class="p-3 p-xl-4" action="contacto.php">
+                        <div class="form-row">
+						    <div class="mb-3">
+						    	<input type="text" class="form-control" name="nombre" placeholder="Nombre">
+						    </div>
+						    <div class="mb-3">
+						    	<input type="text" class="form-control" name="empresa" placeholder="Empresa">
+						    </div>
+						    <div class="mb-3">
+						    	<input type="email" class="form-control" name="mail" placeholder="Email">
+						    </div>
+                        	<div class="mb-3">
+                        		<textarea class="form-control" name="message" rows="6" placeholder="Comentarios"></textarea>
+                        	</div>
+                        	<div>
+                        		<button class="btn btn-secondary d-block w-100" type="submit">Enviar </button>
+                        	</div>
+                        </div>
+                    </form>
 				</div>
-		</footer>
-	</div>
+		</section>
+	</main>
+	<!------ Termina main ------>
+
+	<!------ inicia footer ------>
+	  <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-secondary text-white-50 mt-auto">
+	    <div class="container text-center">
+	      <small>Copyright &copy; Jorge Pastoriza 2022</small>
+	    </div>
+	  </footer>
+	<!------ termina footer ------>
+
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
