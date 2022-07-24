@@ -13,6 +13,11 @@
 	height: 75px;
 }
 
+.logoSmall{
+	width: 35px;
+}
+
+
 #botonera ul li a{
 	color: #312F2F;
 	font-size: 1.2em;
@@ -23,15 +28,12 @@
 }
 
 .btn-celeste{
-	color:#ffff;
-	background-color:#A3C5E9;
-	border-color:#A3C5E9;
+	background-color:#689CF1;
 }
 
 .btn-celeste:hover{
 	color:#fff;
 	background-color:#0b5ed7;
-	border-color:#0a58ca
 }
 
 h1{
@@ -40,6 +42,8 @@ h1{
 
 /* carousel-indicators invierto color para que se vean oscuros*/
 .carousel-control-next,
-.carousel-control-prev {
+.carousel-control-prev,
+.carousel-indicators,
+.carousel-caption {
     filter: invert(100%);
 }

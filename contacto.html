@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DM Insumos</title>
 	<link rel="shortcut icon" href="img/favicon.png">
-	<link rel="stylesheet" href="css/estilo_bt.css">
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/estilo_bt.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 	<!-- inicia nav -->
@@ -50,19 +50,19 @@
 					<form class="p-3 p-xl-4" action="contacto.php">
                         <div class="form-row">
 						    <div class="mb-3">
-						    	<input type="text" class="form-control" name="nombre" placeholder="Nombre">
+						    	<input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
 						    </div>
 						    <div class="mb-3">
 						    	<input type="text" class="form-control" name="empresa" placeholder="Empresa">
 						    </div>
 						    <div class="mb-3">
-						    	<input type="email" class="form-control" name="mail" placeholder="Email">
+						    	<input type="email" class="form-control" name="mail" placeholder="Email" required>
 						    </div>
                         	<div class="mb-3">
-                        		<textarea class="form-control" name="message" rows="6" placeholder="Comentarios"></textarea>
+                        		<textarea class="form-control" name="message" rows="6" placeholder="Comentarios" required></textarea>
                         	</div>
                         	<div>
-                        		<button class="btn btn-secondary d-block w-100" type="submit">Enviar </button>
+                        		<button class="btn btn-celeste d-block w-100" type="submit">Enviar </button>
                         	</div>
                         </div>
                     </form>
@@ -75,6 +75,8 @@
 	  <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-secondary text-white-50 mt-auto">
 	    <div class="container text-center">
 	      <small>Copyright &copy; Jorge Pastoriza 2022</small>
+	      <a href="http://facebook.com" target="_blank"><img src="img/facebook.svg" alt="Cuenta Facebook" class="logoSmall"></a>
+	      <a href="http://instagram.com" target="_blank"><img src="img/instagram.svg" alt="Cuenta Instagran" class="logoSmall"></a>
 	    </div>
 	  </footer>
 	<!------ termina footer ------>
