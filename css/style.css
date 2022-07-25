@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#botonera ul li a {
+  color: #312F2F;
+  font-size: 1.2em;
+}
+#botonera ul li a:hover {
+  color: grey;
+}
+
+.btn-celeste {
+  background-color: rgba(163, 197, 233, 0.8);
+}
+.btn-celestehover {
+  color: #fff;
+  background-color: grey;
+}
+
+.bg-celeste {
+  background-color: rgba(163, 197, 233, 0.8);
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+}
+
+.logoSmall {
+  width: 35px;
+}
+
+h1 {
+  border-bottom: solid;
+}
+
+p {
+  color: grey;
+}
+
+/* carousel-indicators invierto color para que se vean oscuros*/
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators,
+.carousel-caption {
+  filter: invert(100%);
+}/*# sourceMappingURL=style.css.map */
