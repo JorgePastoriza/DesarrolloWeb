@@ -4,19 +4,24 @@
 }
 
 #botonera ul li a {
-  color: #312F2F;
   font-size: 1.2em;
+  line-height: 1.4em;
+  color: #312F2F;
 }
 #botonera ul li a:hover {
   color: grey;
 }
 
-.btn-celeste {
+.btn-celeste, .btn-celeste-forchi {
   background-color: rgba(163, 197, 233, 0.8);
 }
-.btn-celestehover {
+.btn-celeste:hover, .btn-celeste-forchi:hover {
   color: #fff;
-  background-color: grey;
+  background-color: #6D65FA;
+}
+
+.btn-celeste-forchi {
+  font-weight: 400;
 }
 
 .bg-celeste {
@@ -33,10 +38,15 @@
 }
 
 h1 {
+  font-size: 2em;
+  line-height: 1.4em;
+  color: #000000;
   border-bottom: solid;
 }
 
 p {
+  font-size: 1.2em;
+  line-height: 1.4em;
   color: grey;
 }
 
@@ -46,4 +56,6 @@ p {
 .carousel-indicators,
 .carousel-caption {
   filter: invert(100%);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-@import url('_vars.scss');
+
+@import '_vars.scss';
 
 *{
 	font-family: 'Roboto', sans-serif;
+}
+
+// La magia del mixin
+
+@mixin texto($tamano, $height, $color){
+    font-size: $tamano;
+    line-height: $height;
+    color: $color;
 }
 
 #botonera{
     ul{
         li{
             a{
-                color: $menuColor;
-	            font-size: 1.2em;
+                @include texto(1.2em, 1.4em, map-get($map:$paleta,$key:'menu'));
                 &:hover{
-                    color: $fontColor;
+                    color: map-get($map:$paleta,$key:'font');
                 }
             }
         }
@@ -20,15 +28,22 @@
 }
 
 .btn-celeste{
-	background-color:$mainColor;
-    &hover{
-        color: $colorWhite;
-	    background-color:$fontColor;
+	background-color: map-get($map:$paleta,$key:'principal');
+    &:hover{
+        color: map-get($map:$paleta,$key:'blanco');
+	    background-color:map-get($map:$paleta,$key:'azul');
     }
 }
 
+
+//Aca tenemos un extend
+.btn-celeste-forchi{
+    @extend .btn-celeste;
+    font-weight: 400;
+}
+
 .bg-celeste {
-	background-color: $mainColor;
+	background-color: map-get($map:$paleta,$key:'principal');
 }
 
 .logo {
@@ -41,11 +56,12 @@
 }
 
 h1 {
+    @include texto(2em, 1.4em, map-get($map:$paleta,$key:'titulos'));
 	border-bottom: solid;
 }
 
 p {
-    color: $fontColor;
+     @include texto(1.2em, 1.4em, map-get($map:$paleta,$key:'font'));
 }
 
 /* carousel-indicators invierto color para que se vean oscuros*/
