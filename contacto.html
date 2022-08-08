@@ -48,23 +48,12 @@
             			<h1 class="text-center">EN CONTACTO</h1>
             			<p>Si tiene alguna duda o consulta sobre los productos comercializados lo invitamos a contactarse con nosotros.</p>
             		</div>
-					<form class="p-3 p-xl-4" action="contacto.php">
-                        <div class="form-row">
-						    <div class="mb-3">
-						    	<input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
-						    </div>
-						    <div class="mb-3">
-						    	<input type="text" class="form-control" name="empresa" placeholder="Empresa">
-						    </div>
-						    <div class="mb-3">
-						    	<input type="email" class="form-control" name="mail" placeholder="Email" required>
-						    </div>
-                        	<div class="mb-3">
-                        		<textarea class="form-control" name="message" rows="6" placeholder="Comentarios" required></textarea>
-                        	</div>
-                        	<div>
-                        		<button class="btn btn-celeste-forchi d-block w-100" type="submit">Enviar </button>
-                        	</div>
+					<form class="col-md-12 col-xl-8 mx-auto" role="form" id="contactForm">
+		                    <div class="form-group"><label for="name">Nombre</label><input class="form-control item" type="text" id="name" required></div>
+		                    <div class="form-group"><label for="subject">Empresa</label><input class="form-control item" type="text" id="subject"></div>
+		                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email" required></div>
+		                    <div class="form-group"><label for="message">Mensaje</label><textarea class="form-control item" id="message" required></textarea></div>
+		                    <div class="form-group"><button class="btn btn-celeste-forchi d-block w-100" type="submit">Enviar </button></div>
                         </div>
                     </form>
 				</div>
@@ -84,5 +73,9 @@
 
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 </html>

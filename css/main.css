@@ -30,7 +30,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #0d6efd;
+  --bs-primary: rgba(163, 197, 233, 0.8);
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -38,7 +38,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 163, 197, 233;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -69,8 +69,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #0d6efd;
-  --bs-link-hover-color: #0a58ca;
+  --bs-link-color: rgba(163, 197, 233, 0.8);
+  --bs-link-hover-color: rgba(119, 143, 169, 0.84);
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -173,6 +173,10 @@ svg {
   vertical-align: middle;
 }
 
+label {
+  display: inline-block;
+}
+
 button {
   border-radius: 0;
 }
@@ -192,6 +196,10 @@ textarea {
 
 button {
   text-transform: none;
+}
+
+[role=button] {
+  cursor: pointer;
 }
 
 button,
@@ -384,9 +392,9 @@ iframe {
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #86b7fe;
+  border-color: rgba(218, 232, 246, 0.9);
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(163, 197, 233, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -911,19 +919,6 @@ textarea.form-control {
   }
 }
 
-.placeholder {
-  display: inline-block;
-  min-height: 1em;
-  vertical-align: middle;
-  cursor: wait;
-  background-color: currentcolor;
-  opacity: 0.5;
-}
-.placeholder.btn::before {
-  display: inline-block;
-  content: "";
-}
-
 @keyframes placeholder-glow {
   50% {
     opacity: 0.2;
@@ -995,20 +990,12 @@ textarea.form-control {
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3 {
-  margin-bottom: 1rem !important;
-}
-
 .mb-5 {
   margin-bottom: 3rem !important;
 }
 
 .ms-auto {
   margin-left: auto !important;
-}
-
-.p-3 {
-  padding: 1rem !important;
 }
 
 .py-2 {
@@ -1066,11 +1053,6 @@ textarea.form-control {
     margin-bottom: 0 !important;
   }
 }
-@media (min-width: 1200px) {
-  .p-xl-4 {
-    padding: 1.5rem !important;
-  }
-}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -1116,7 +1098,7 @@ h1, .h1 {
   border-bottom: solid;
 }
 
-p {
+p, label {
   font-size: 1.2em;
   line-height: 1.4em;
   color: grey;

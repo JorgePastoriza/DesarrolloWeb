@@ -62,7 +62,7 @@ h1 {
 	border-bottom: solid;
 }
 
-p {
+p, label {
      @include texto(1.2em, 1.4em, map-get($map:$paleta,$key:'font'));
 }
 
