@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass",
-    "sass:watch": "sass --watch css/style.scss  css/style.css"
+    "sass:watch": "sass --watch css/style.scss  css/style.css",
+    "build":"purgecss --css css/style.css --content *.html -o css/main.css"
   },
   "repository": {
     "type": "git",
