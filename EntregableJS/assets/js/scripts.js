@@ -1,5 +1,5 @@
 const listaProductos = [
-    {id: 1, nombre: "Captain Tsubasa", precioVenta: "500", cantidad: 5, Tipo: "Deporte", imagen: "CaptainTsubasa.webp",},
+    {id: 1, nombre: "Captain Tsubasa", precioVenta: "500", cantidad: 5, Tipo: "Deportes", imagen: "CaptainTsubasa.webp",},
     {id: 2, nombre: "Demon Slayer", precioVenta: "600", cantidad: 5, Tipo: "Demonios", imagen: "DemonSlayer.webp",},
     {id: 3, nombre: "Dragon Ball", precioVenta: "600", cantidad: 3, Tipo: "Aventuras", imagen: "DragonBall.webp",},
     {id: 4, nombre: "Neon Genesis Evangelion", precioVenta: "700", cantidad: 1, Tipo: "Mechas", imagen: "NeonGenesisEvangelion.webp",},
