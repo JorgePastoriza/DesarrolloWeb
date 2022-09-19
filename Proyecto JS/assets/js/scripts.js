@@ -1,4 +1,6 @@
 let Productos = [];
+const contenedorProductos = document.getElementById("divProductos");
+const contenedorVentas = document.getElementById("divVentas");
 
 class Producto {
     constructor(codigo, nombre, precioVenta, cantidad) {
@@ -41,6 +43,24 @@ function venta(prodCodigo, unidades){
             if (dato.cantidad > unidades){
                 Total = dato.precioVenta * unidades;
                 dato.cantidad -= unidades;
+
+                //-----------muestro la venta en otro div
+                let column = document.createElement("div");
+                column.className = "col-md-4 mt-3 ";
+                column.id = `columna-venta-${dato.codigo}`;
+                column.innerHTML = `
+                    <div class="card">
+                        <div class="card-body">
+                        <p class="card-text">ID: <b>${dato.codigo}</b></p>
+                        <p class="card-text">Nombre: <b>${dato.nombre}</b></p>
+                        <p class="card-text">Precio venta: <b>${dato.precioVenta}</b></p>
+                        <p class="card-text">Cantidad: <b>${unidades}</b></p>
+                        <p class="card-text">Total Venta: <b>${Total}</b></p>
+                        </div>
+                    </div>`;
+            
+                contenedorVentas.append(column);
+
             }else{
                 alert("No alcanza el stock del producto");
             }
@@ -50,13 +70,26 @@ function venta(prodCodigo, unidades){
 }
 
 function mostrarProductos() {
-    for (let index = 0; index < Productos.length; index++) {
+/*     for (let index = 0; index < Productos.length; index++) {
         alert("Producto: " + Productos[index].nombre + " Precio: " + Productos[index].precioVenta + " Stock: " + Productos[index].cantidad);
+    } */
+    for (const producto of Productos) {
+        let column = document.createElement("div");
+        column.className = "col-md-4 mt-3 ";
+        column.id = `columna-${producto.codigo}`;
+        column.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                <p class="card-text">ID: <b>${producto.codigo}</b></p>
+                <p class="card-text">Nombre: <b>${producto.nombre}</b></p>
+                <p class="card-text">Precio venta: <b>${producto.precioVenta}</b></p>
+                <p class="card-text">Cantidad: <b>${producto.cantidad}</b></p>
+                </div>
+            </div>`;
+    
+        contenedorProductos.append(column);
     }
 }
-
-console.log(Productos);
-
 
 //-------------------------Aca arranca el menu-----------------
 
